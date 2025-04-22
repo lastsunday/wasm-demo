@@ -1,0 +1,11 @@
+[package]
+name = "rust-lib"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+wasm-pack = "0.13.1"
+getrandom = { version = "0.3", features = ["wasm_js"] }
+
+[lib]
+crate-type = ["cdylib", "rlib"]

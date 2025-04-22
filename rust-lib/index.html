@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello WASM</title>
+</head>
+<body>
+  <h1 id="greeting"></h1>
+  <script type="module">
+    import init, { greet } from './pkg/rust-lib.js';
+
+    async function runWasm() {
+      await init();
+      document.getElementById("greeting").textContent = greet();
+    }
+
+    runWasm();
+  </script>
+</body>
+</html>
